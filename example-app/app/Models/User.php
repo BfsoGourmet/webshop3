@@ -11,7 +11,6 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -32,7 +31,6 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-
     /**
      * The attributes that should be cast.
      *
@@ -41,4 +39,25 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+}
+class Product {
+    private string $productTitle = "title";
+    private int $price = 0;
+    private string $description = "";
+
+    public function __construct(string $productTitle,int $price,string $description){
+        $this->productTitle = $productTitle;
+        $this->price = $price;
+        $this->description = $description;
+    }
+
+    public function getProductTitle(){
+       return $this ->productTitle;
+    }
+    public function getPrice(){
+        return $this ->price;
+    }
+    public function getDescription(){
+     return $this ->description;
+     }
 }
