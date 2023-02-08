@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use \App\Http\Controllers\ApiController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,12 @@ Route::get('/', function () {
 });
 
 Route::get('/test', [TestController::class, 'show_test']);
+
+
+Route::get('/api_test', [ApiController::class, 'show_test']);
+
+
+Route::get('/product', [ProductController::class, 'return_view']);
 
 
 
