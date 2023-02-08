@@ -1,0 +1,154 @@
+{
+    "products": [
+        {
+            "sku": "000001",
+            "in_stock": "1",
+            "title": "Broccoli",
+            "short_description": "Broccoli ca. 500g",
+            "description": "Broccoli ca. 500g \n aus Spanien / Italien",
+            "is_vegeterian": "1",
+            "is_vegan": "1",
+            "calories": "170",
+            "sugar_in_calories": "100",
+            "slug": "broccoli-500g",
+            "price": "1.80",
+            "image": "URL to image",
+            "categories": [
+                {
+                    "name": ""
+                }
+            ],
+            "allergies": [
+                {
+                    "name": ""
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "",
+                    "stock": 10
+                }
+            ]
+        },
+        {
+            "sku": "000002",
+            "in_stock": "31",
+            "title": "Blumenkohl",
+            "short_description": "Blumenkohl ca. 900g",
+            "description": "Blumenkohl ca. 900g \n Blumenkohl",
+            "is_vegeterian": "1",
+            "is_vegan": "1",
+            "calories": "300",
+            "sugar_in_calories": "200",
+            "slug": "blumenkohl-900g",
+            "price": "305",
+            "image": "URL to image",
+            "categories": [
+                {
+                    "name": ""
+                }
+            ],
+            "allergies": [
+                {
+                    "name": ""
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "",
+                    "stock": 10
+                }
+            ]
+        },
+        {
+            "sku": "000003",
+            "in_stock": "0",
+            "title": "Bündner Cordon bleu",
+            "short_description": "Bündner Cordon bleu Schweiz",
+            "description": "Schweinsplätzli gefüllt mit Käse und Rohschinken, paniert \n Gefüllt mit Bündner Rohschinken und Bio Bündner Bergkäse, mit Panier- und Panadenmehl paniert. \n Schweizer Schweinefleisch. Tierfreundliche Auslaufhaltung. Futtermittel garantiert ohne gentechnisch veränderte Organismen. Vorteile Naturafarm: Herkunft Schweiz - Auslauf ins Freie, mit Stroh eingestreute Liegeflächen. - Unangemeldete Kontrollen durch den Schweizer Tierschutz STS. Vakuumverpackt.",
+            "is_vegeterian": "0",
+            "is_vegan": "0",
+            "calories": "9.4",
+            "sugar_in_calories": "1.6",
+            "slug": "bündner-cordon-bleu",
+            "price": "7.35",
+            "image": "URL to image",
+            "categories": [
+                {
+                    "name": ""
+                }
+            ],
+            "allergies": [
+                {
+                    "name": ""
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "",
+                    "stock": 10
+                }
+            ]
+        },
+        {
+            "sku": "000004",
+            "in_stock": "1000",
+            "title": "Ticino DOC Merlot Selezione d'Ottobre",
+            "short_description": "Ticino DOC Merlot Selezione d'Ottobre Schweiz, 2019",
+            "description": "Kräftiges Rubinrot, reife Beerenaromatik, mit angenehmer Würzigkeit, mittelkräftig und rund, mit feiner Herbe im Abgang.",
+            "is_vegeterian": "1",
+            "is_vegan": "1",
+            "calories": "1070",
+            "sugar_in_calories": "0",
+            "slug": "ticino-doc-merlot-selezione-d'ottobre",
+            "price": "15.50",
+            "image": "URL to image",
+            "categories": [
+                {
+                    "name": ""
+                }
+            ],
+            "allergies": [
+                {
+                    "name": ""
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "",
+                    "stock": 10
+                }
+            ]
+        },
+        {
+            "sku": "000005",
+            "in_stock": "12",
+            "title": "Bimbosan Säuglingsanfangsnahrung Bisoja 1 Refill 0+ Monate",
+            "short_description": "Bimbosan Säuglingsanfangsnahrung Bisoja 1 Refill 0+ Monate Bimbosan",
+            "description": "Maltodextrin, pflanzliche Öle (Sonnenblumenöl, Kokosnussöl, Rapsöl), SOJAPROTEINISOLAT, Fructooligosaccharide, Mineralstoffe (Kalziumphosphat, Kaliumcitrat, Kalziumhydroxid, Magnesiumchlorid, Kaliumchlorid, Dinatriumphosphat, Kalziumcitrat, Kalziumchlorid, Natriumcitrat, Eisensulfat, Kaliumhydroxid, Zinksulfat, Kupfersulfat, Kaliumjodid, Natriumselenit, Mangansulfat), Emulgatoren (Mono- und Diglyceride von Speisefettsäuren, Sonnenblumenlecithin), Crypthecodinium Cohnii Öl, Mortierella-alpina-Öl, Vitamine (Vitamin C, Vitamin E, Vitamin D, Vitamin A, Niacin, Pantothensäure, Vitamin B12, Vitamin B6, Vitamin B2, Vitamin K, Vitamin B1, Folsäure, Biotin), Cholinchlorid, Inositol, L-Methionin, Taurin, Nukleotide (Cytidin-5’-Monophosphat, Dinatriumuridin-5’-Monophosphat, Adenosin-5’-Monophosphat, Dinatriuminosin-5’-Monophosphat, Dinatriumguanosin-5’-Monophosphat), L-Tryptophan, Antioxidantien (Ascorbylpalmitat, stark tocopherolhaltige Extrakte), L-Carnitin.",
+            "is_vegeterian": "0",
+            "is_vegan": "1",
+            "calories": "1256",
+            "sugar_in_calories": "0",
+            "slug": "bimbosan-säuglingsanfangsnahrung-bisoja-1-refill-0-monate",
+            "price": "19.95",
+            "image": "URL to image",
+            "categories": [
+                {
+                    "name": ""
+                }
+            ],
+            "allergies": [
+                {
+                    "name": ""
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "",
+                    "stock": 10
+                }
+            ]
+        }
+    ]
+}
