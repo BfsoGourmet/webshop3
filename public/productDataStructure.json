@@ -1,0 +1,274 @@
+{
+    "products": [
+        {
+            "sku": "000001",
+            "in_stock": "1",
+            "title": "Broccoli",
+            "short_description": "Broccoli ca. 500g",
+            "description": "Broccoli ca. 500g \n aus Spanien / Italien",
+            "is_vegeterian": "1",
+            "is_vegan": "1",
+            "calories": "170",
+            "sugar_in_calories": "100",
+            "slug": "broccoli-500g",
+            "price": "1.80",
+            "image": "https://www.coop.ch/img/produkte/737_737/RGB/6471085_001.jpg",
+            "categories": [
+                {
+                    "name": "Gemüse"
+                }
+            ],
+            "allergies": [
+                {
+                    "name": "Ei, Erdnüße, Fisch, Gluten, Krustentiere, Lupinen, Kuhmilch, Schalenfrüchte, Schwefeldioxid und Sulfite, Sellerie, Senf, Sesam, Soja, Weichtiere"
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "Dini Mama",
+                    "stock": 10
+                }
+            ]
+        },
+        {
+            "sku": "000002",
+            "in_stock": "31",
+            "title": "Blumenkohl",
+            "short_description": "Blumenkohl ca. 900g",
+            "description": "Blumenkohl ca. 900g \n Blumenkohl",
+            "is_vegeterian": "1",
+            "is_vegan": "1",
+            "calories": "300",
+            "sugar_in_calories": "200",
+            "slug": "blumenkohl-900g",
+            "price": "3.05",
+            "image": "https://www.coop.ch/img/produkte/430_430/RGB/6675215_001.jpg",
+            "categories": [
+                {
+                    "name": "Gemüse"
+                }
+            ],
+            "allergies": [
+                {
+                    "name": "Ei, Erdnüße, Fisch, Gluten, Krustentiere"
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "Coop",
+                    "stock": 1
+                }
+            ]
+        },
+        {
+            "sku": "000003",
+            "in_stock": "0",
+            "title": "Bündner Cordon bleu",
+            "short_description": "Bündner Cordon bleu Schweiz",
+            "description": "Schweinsplätzli gefüllt mit Käse und Rohschinken, paniert \n Gefüllt mit Bündner Rohschinken und Bio Bündner Bergkäse, mit Panier- und Panadenmehl paniert. \n Schweizer Schweinefleisch. Tierfreundliche Auslaufhaltung. Futtermittel garantiert ohne gentechnisch veränderte Organismen. Vorteile Naturafarm: Herkunft Schweiz - Auslauf ins Freie, mit Stroh eingestreute Liegeflächen. - Unangemeldete Kontrollen durch den Schweizer Tierschutz STS. Vakuumverpackt.",
+            "is_vegeterian": "0",
+            "is_vegan": "0",
+            "calories": "9.4",
+            "sugar_in_calories": "1.6",
+            "slug": "bündner-cordon-bleu",
+            "price": "7.35",
+            "image": "https://www.coop.ch/img/produkte/450_450/RGB/3924572_200.jpg",
+            "categories": [
+                {
+                    "name": "Fleisch"
+                }
+            ],
+            "allergies": [
+                {
+                    "name": "Fisch, Gluten, Krustentiere"
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "Migros",
+                    "stock": 16
+                }
+            ]
+        },
+        {
+            "sku": "000004",
+            "in_stock": "1000",
+            "title": "Ticino DOC Merlot Selezione d'Ottobre",
+            "short_description": "Ticino DOC Merlot Selezione d'Ottobre Schweiz, 2019",
+            "description": "Kräftiges Rubinrot, reife Beerenaromatik, mit angenehmer Würzigkeit, mittelkräftig und rund, mit feiner Herbe im Abgang.",
+            "is_vegeterian": "1",
+            "is_vegan": "1",
+            "calories": "1070",
+            "sugar_in_calories": "0",
+            "slug": "ticino-doc-merlot-selezione-d'ottobre",
+            "price": "15.50",
+            "image": "https://www.coop.ch/img/produkte/280_450/RGB/1001198016_002.jpg",
+            "categories": [
+                {
+                    "name": "Alkohol"
+                }
+            ],
+            "allergies": [
+                {
+                    "name": "nix"
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "Tessin",
+                    "stock": 100
+                }
+            ]
+        },
+        {
+            "sku": "000005",
+            "in_stock": "12",
+            "title": "Bimbosan Säuglingsanfangsnahrung Bisoja 1 Refill 0+ Monate",
+            "short_description": "Bimbosan Säuglingsanfangsnahrung Bisoja 1 Refill 0+ Monate Bimbosan",
+            "description": "Maltodextrin, pflanzliche Öle (Sonnenblumenöl, Kokosnussöl, Rapsöl), SOJAPROTEINISOLAT, Fructooligosaccharide, Mineralstoffe (Kalziumphosphat, Kaliumcitrat, Kalziumhydroxid, Magnesiumchlorid, Kaliumchlorid, Dinatriumphosphat, Kalziumcitrat, Kalziumchlorid, Natriumcitrat, Eisensulfat, Kaliumhydroxid, Zinksulfat, Kupfersulfat, Kaliumjodid, Natriumselenit, Mangansulfat), Emulgatoren (Mono- und Diglyceride von Speisefettsäuren, Sonnenblumenlecithin), Crypthecodinium Cohnii Öl, Mortierella-alpina-Öl, Vitamine (Vitamin C, Vitamin E, Vitamin D, Vitamin A, Niacin, Pantothensäure, Vitamin B12, Vitamin B6, Vitamin B2, Vitamin K, Vitamin B1, Folsäure, Biotin), Cholinchlorid, Inositol, L-Methionin, Taurin, Nukleotide (Cytidin-5’-Monophosphat, Dinatriumuridin-5’-Monophosphat, Adenosin-5’-Monophosphat, Dinatriuminosin-5’-Monophosphat, Dinatriumguanosin-5’-Monophosphat), L-Tryptophan, Antioxidantien (Ascorbylpalmitat, stark tocopherolhaltige Extrakte), L-Carnitin.",
+            "is_vegeterian": "0",
+            "is_vegan": "1",
+            "calories": "1256",
+            "sugar_in_calories": "0",
+            "slug": "bimbosan-säuglingsanfangsnahrung-bisoja-1-refill-0-monate",
+            "price": "19.95",
+            "image": "https://www.coop.ch/img/produkte/737_737/RGB/6709632_001.jpg",
+            "categories": [
+                {
+                    "name": "Babynahrung"
+                }
+            ],
+            "allergies": [
+                {
+                    "name": "Schalenfrüchte, Schwefeldioxid und Sulfite"
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "Coop",
+                    "stock": 50
+                }
+            ]
+        },
+        {
+            "sku": "000006",
+            "in_stock": "590",
+            "title": "Hauswurst",
+            "short_description": "Schweizer Hauswurst nicht Saas",
+            "description": "Pro 100 g: Schweinefleisch 61 g (Schweiz), Rindfleisch 55 g (Schweiz), Speck (Schweiz), Randen 8 g, Nitritpökelsalz (Kochsalz, Konserviesrungsmittel [E 250]), Gewürze, Traubenzucker, Glucosesirup, Aroma, Antioxidantien (E 301, E 300, E 331).",
+            "is_vegeterian": "0",
+            "is_vegan": "0",
+            "calories": "1530",
+            "sugar_in_calories": "1.5",
+            "slug": "schweizer-hauswurst-nicht-saas",
+            "price": "7.95",
+            "image": "https://www.coop.ch/img/produkte/430_430/RGB/4054616_001.jpg",
+            "categories": [
+                {
+                    "name": "Fleisch"
+                }
+            ],
+            "allergies": [
+                {
+                    "name": "Kuhmilch, Schalenfrüchte, Schwefeldioxid und Sulfite, Sellerie, Senf, Sesam"
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "Nicht Saas",
+                    "stock": 0
+                }
+            ]
+        },
+        {
+            "sku": "000007",
+            "in_stock": "12",
+            "title": "Butter 4x 250g",
+            "short_description": "Die Butter Mödeli 4x 250g Die Butter",
+            "description": "Die Butter aus pasteurisiertem Rahm. 250g",
+            "is_vegeterian": "1",
+            "is_vegan": "0",
+            "calories": "3050",
+            "sugar_in_calories": "0",
+            "slug": "butter-4x-250g",
+            "price": "15.80",
+            "image": "https://www.coop.ch/img/produkte/430_430/RGB/3081185_900.jpg",
+            "categories": [
+                {
+                    "name": "Milchprodukt"
+                }
+            ],
+            "allergies": [
+                {
+                    "name": "Kuhmilch, Senf, Sesam"
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "Muuuuuu",
+                    "stock": 1000
+                }
+            ]
+        },
+        {
+            "sku": "000008",
+            "in_stock": "10",
+            "title": "Silserkranz",
+            "short_description": "Naturaplan Bio Silserkranz 300g",
+            "description": "Silserkranz WEIZENMEHL (Weiss, Halbweiss), Wasser, Rapsöl, VOLLMILCHPULVER (Schweiz), Hefe, Kochsalz jodiert, Säureregulator (E 524), WEIZENDUNST, Sauerteig (WEIZEN), WEIZENGLUTEN, Acerolapulver auf Maniokstärke, Enzyme (Xylanasen, Amylasen). Kann Spuren von BAUMNUSS, EIERN,HASELNUSS, MANDELN, SESAM, SOJA enthalten. Alle landwirtschaftlichen Zutaten stammen aus biologischer Produktion.",
+            "is_vegeterian": "1",
+            "is_vegan": "1",
+            "calories": "1322",
+            "sugar_in_calories": "15",
+            "slug": "silserkranz",
+            "price": "3.10",
+            "image": "https://www.coop.ch/img/produkte/450_450/RGB/4033691_200.jpg",
+            "categories": [
+                {
+                    "name": "Brot"
+                }
+            ],
+            "allergies": [
+                {
+                    "name": "Schwefeldioxid,"
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "Leo",
+                    "stock": 100
+                }
+            ]
+        },
+        {
+            "sku": "000009",
+            "in_stock": "5",
+            "title": "Gemüse-Dip Platte",
+            "short_description": "Gemüsestücke mit Cocktail- und Kräutersauce",
+            "description": "Gemüsestücke 750g: Peperoni (rot, gelb), Karotten, Pfälzerkarotten, Stangensellerie (mit Antioxidationsmittel [E 300, E 301, E 302]), Rettich, Zucchetti, Cherry-Tomaten, Lollo rosso. Cocktailsauce 100g: Rapsöl, Wasser, Tomatenkonzentrat, Zucker, Eigelb, Tafelessig, Weinbrand 'Cognac' (mit Farbstoff [E 150a]), Senf, Kochsalz jodiert, modifizierte Stärke, Muskatnuss, Fenchelsamen, Nelken.Alkoholhaltig. Für Kinder nicht geeignet. Kräutersauce 100g Rapsöl, Wasser, saurer Halbrahm, Vollmilchjogurt, Eigelb, Tafelessig, modifizierte Stärke, Verdickungsmittel (E 415), Senf, Kochsalz jodiert, Knoblauch, Petersilie, Schnittlauch, Zucker, Zwiebelpulver.",
+            "is_vegeterian": "0",
+            "is_vegan": "0",
+            "calories": "4545",
+            "sugar_in_calories": "453",
+            "slug": "gemüse-dip-platte",
+            "price": "33.00",
+            "image": "https://www.coop.ch/img/produkte/450_450/RGB/4183302_200.jpg",
+            "categories": [
+                {
+                    "name": "Fleisch, Dip"
+                }
+            ],
+            "allergies": [
+                {
+                    "name": "Schalenfrüchte, Sesam"
+                }
+            ],
+            "suppliers": [
+                {
+                    "name": "Gott",
+                    "stock": 5450
+                }
+            ]
+        }
+    ]
+}
