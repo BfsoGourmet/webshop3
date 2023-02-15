@@ -21,5 +21,5 @@ Route::get('/', function () {
 */
 
 Route::get('/', function () {
-    ProductListController::test();
+    ProductListController::returnView();
 });
