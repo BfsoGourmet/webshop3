@@ -23,3 +23,20 @@ Route::get('/', function () {
 Route::get('/', function () {
     ProductListController::returnView();
 });
+
+// TODO, Search function
+Route::get('/search', function () {
+    ProductListController::returnView();
+});
+
+// TODO, Checkout view function
+Route::get('/checkout', function () {
+    ProductListController::returnView();
+});
+
+// TODO, Detail view function
+Route::get('/product', function () {
+    ProductListController::returnView();
+});
+
+

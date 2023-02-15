@@ -25,12 +25,12 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <form class="form-inline" action="/suche/">
+                <form class="form-inline" action="/search/">
                     <input class="form-control mr-sm-2" name="search" type="search" placeholder="Suche" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" style="display:none;" type="submit">test</button>
                 </form>
             </ul>
-            <form class="d-flex" action="/warenkorb/">
+            <form class="d-flex" action="/checkout/">
                 <button class="btn btn-outline-dark" type="submit">
                     <i class="bi-cart-fill me-1"></i>
                     Warenkorb
