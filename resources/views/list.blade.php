@@ -19,7 +19,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a style="width: 80%;" class="btn btn-outline-dark mt-auto" href="#"><i class="bi-cart-fill me-1"></i> </a></div>
+                            <div class="text-center"><button style="width: 80%;" class="btn btn-outline-dark mt-auto" onclick="addToCart('{{$product['sku']}}')"><i class="bi-cart-fill me-1"></i> </button></div>
                         </div>
                     </div>
                 </div>

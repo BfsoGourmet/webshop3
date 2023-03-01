@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductListController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,4 +40,19 @@ Route::get('/product', function () {
     ProductListController::returnView();
 });
 
+// TODO, Detail view function
+Route::get('/intoCart/{sku}', function (string $sku) {
+    ProductListController::addToCart($sku);
+});
+
+// TODO, Detail view function
+Route::get('/outOfCart/{sku}', function (string $sku) {
+    ProductListController::removeFromCart($sku);
+});
+
+
+// TODO, Detail view function
+Route::get('/test', function () {
+    ProductListController::test();
+});
 
