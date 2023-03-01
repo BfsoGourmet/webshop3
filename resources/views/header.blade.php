@@ -46,7 +46,7 @@
 
 
 <!-- Header-->
-<header class="bg-dark py-5" style="background-image:url('img/banner.jpg');background-size:cover;background-position:bottom;">
+<header class="bg-dark py-5" style="background-image:url('/img/banner.jpg');background-size:cover;background-position:bottom;">
     <div class="container py-5 px-4 px-lg-5 my-5" >
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">GourmetWallis</h1>

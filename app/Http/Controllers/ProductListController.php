@@ -19,6 +19,12 @@ class ProductListController extends BaseController
         echo view('footer');
     }
 
+    public static function returnCartView() {
+        echo view('header');
+        echo view('cart');
+        echo view('footer');
+    }
+
     private static function getAPI($url) {
         // For test
         $response = Http::get($url);

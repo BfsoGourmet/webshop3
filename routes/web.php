@@ -32,7 +32,7 @@ Route::get('/search', function () {
 
 // TODO, Checkout view function
 Route::get('/checkout', function () {
-    ProductListController::returnView();
+    ProductListController::returnCartView();
 });
 
 // TODO, Detail view function
