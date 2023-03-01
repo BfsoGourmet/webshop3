@@ -1,15 +1,14 @@
 <?php
- 
 namespace App\Http\Controllers;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\View\View;
+use Illuminate\Http\Request;
  
 class BasketController extends Controller
 {
-    public function showBasket(Request $request, string $id): View
+    public function showBasket(Request $request):View
     {
-        $value = $request->session()->get('key');
+        insertSomeStuff();
         return view('basket');
     }
     public function addItemToBasket(string $item){
@@ -23,5 +22,10 @@ class BasketController extends Controller
     }
     public function SetNumberOfItems(string $number){
         $request ->session()->put('length',$number);
+    }
+    public function insertSomeStuff(){
+        $request ->session()->put(0,"First Item");
+        $request ->session()->put(1,"Second Item");
+        $request ->session()->put('length',2);
     }
 }

@@ -48,7 +48,6 @@ $('.promo-code-cta').click(function() {
   }
 });
 
-
 function recalculateCart(onlyTotal) {
   var subtotal = 0;
 
@@ -56,9 +55,7 @@ function recalculateCart(onlyTotal) {
     subtotal += parseFloat($(this).children('.subtotal').text());
   });
 
-
   var total = subtotal;
-
   var promoPrice = parseFloat($('.promo-value').text());
   if (promoPrice) {
     if (subtotal >= 10) {
@@ -68,15 +65,12 @@ function recalculateCart(onlyTotal) {
       $('.summary-promo').addClass('hide');
     }
   }
-
   if (onlyTotal) {
-
     $('.total-value').fadeOut(fadeTime, function() {
       $('#basket-total').html(total.toFixed(2));
       $('.total-value').fadeIn(fadeTime);
     });
   } else {
-
     $('.final-value').fadeOut(fadeTime, function() {
       $('#basket-subtotal').html(subtotal.toFixed(2));
       $('#basket-total').html(total.toFixed(2));
@@ -89,7 +83,6 @@ function recalculateCart(onlyTotal) {
     });
   }
 }
-
 function updateQuantity(quantityInput) {
 
   var productRow = $(quantityInput).parent().parent();
@@ -108,7 +101,6 @@ function updateQuantity(quantityInput) {
   productRow.find('.item-quantity').text(quantity);
   updateSumItems();
 }
-
 function updateSumItems() {
   var sumItems = 0;
   $('.quantity input').each(function() {
@@ -116,7 +108,6 @@ function updateSumItems() {
   });
   $('.total-items').text(sumItems);
 }
-
 /* Remove item from cart */
 function removeItem(removeButton) {
   /* Remove row from DOM and recalc cart total */
@@ -128,14 +119,12 @@ function removeItem(removeButton) {
   });
 }
 </script>
-
   <body>
   <main>
     <div class="basket">
-
     <div class = "header">
     <h2>Warenkorb</h2>
-</div>
+    </div>
       <div class="basket-labels">
         <ul>
           <li class="item item-heading">Item</li>
@@ -181,23 +170,22 @@ function removeItem(removeButton) {
         <div class="remove">
           <button>Remove</button>
         </div>
-      </div>
     </div>
-  </main>
+    <div class = "checkout-class">
+       <button id= "checkout">Checkout</button>
+     </div> 
+    </div>
+</main>
 </body>
 </html>
-
 <style>
 @charset "utf-8";
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
-
 html,
 html a {
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
-
 body {
   background-color: #fff;
   color: #666;
@@ -205,51 +193,42 @@ body {
   font-size: 62.5%;
   margin: 0 auto;
 }
-
 a {
   border: 0 none;
   outline: 0;
   text-decoration: none;
 }
-
 strong {
   font-weight: bold;
 }
-
 p {
   margin: 0.75rem 0 0;
 }
-
 h1 {
   font-size: 0.75rem;
   font-weight: normal;
   margin: 0;
   padding: 0;
 }
-
 input,
 button {
   border: 0 none;
   outline: 0 none;
 }
-
 button {
   background-color: #666;
   color: #fff;
 }
-
 button:hover,
 button:focus {
   background-color: #555;
 }
-
 img,
 .basket-module,
 .basket-labels,
 .basket-product {
   width: 100%;
 }
-
 input,
 button,
 .basket,
@@ -264,7 +243,6 @@ button,
 .product-details {
   float: left;
 }
-
 .price:before,
 .subtotal:before,
 .subtotal-value:before,
@@ -272,11 +250,9 @@ button,
 .promo-value:before {
   content: '£';
 }
-
 .hide {
   display: none;
 }
-
 main {
   clear: both;
   font-size: 0.75rem;
@@ -285,7 +261,6 @@ main {
   padding: 1rem 0;
   width: 960px;
 }
-
 .basket,
 aside {
   padding: 0 1rem;
@@ -293,20 +268,17 @@ aside {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 .basket {
   width: 70%;
+  position: relative; 
 }
-
 .basket-module {
   color: #111;
 }
-
 label {
   display: block;
   margin-bottom: 0.3125rem;
 }
-
 .promo-code-field {
   border: 1px solid #ccc;
   padding: 0.5rem;
@@ -318,56 +290,46 @@ label {
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
 }
-
 .promo-code-field:hover,
 .promo-code-field:focus {
   border: 1px solid #999;
 }
-
 .promo-code-cta {
   border-radius: 4px;
   font-size: 0.625rem;
   margin-left: 0.625rem;
   padding: 0.6875rem 1.25rem 0.625rem;
 }
-
 .basket-labels {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   margin-top: 1.625rem;
 }
-
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 li {
   color: #111;
   display: inline-block;
   padding: 0.625rem 0;
 }
-
 li.price:before,
 li.subtotal:before {
   content: '';
 }
-
 .item {
   width: 55%;
 }
-
 .price,
 .quantity,
 .subtotal {
   width: 15%;
 }
-
 .subtotal {
   text-align: right;
 }
-
 .remove {
   bottom: 1.125rem;
   float: right;
@@ -376,7 +338,6 @@ li.subtotal:before {
   text-align: right;
   width: 45%;
 }
-
 .remove button {
   background-color: transparent;
   color: #777;
@@ -384,39 +345,33 @@ li.subtotal:before {
   text-decoration: underline;
   text-transform: uppercase;
 }
-
 .item-heading {
   padding-left: 4.375rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 .basket-product {
   border-bottom: 1px solid #ccc;
   padding: 1rem 0;
   position: relative;
+  margin-bottom: 2rem;
 }
-
 .product-image {
   width: 35%;
 }
-
 .product-details {
   width: 65%;
 }
-
 .product-frame {
   border: 1px solid #aaa;
 }
-
 .product-details {
   padding: 0 1.5rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 .quantity-field {
   background-color: #ccc;
   border: 1px solid #aaa;
@@ -425,13 +380,11 @@ li.subtotal:before {
   padding: 2px;
   width: 3.75rem;
 }
-
 aside {
   float: right;
   position: relative;
   width: 30%;
 }
-
 .summary {
   background-color: #eee;
   border: 1px solid #aaa;
@@ -442,13 +395,11 @@ aside {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 .summary-total-items {
   color: #666;
   font-size: 0.875rem;
   text-align: center;
 }
-
 .summary-subtotal,
 .summary-total {
   border-top: 1px solid #ccc;
@@ -458,7 +409,6 @@ aside {
   overflow: hidden;
   padding: 0.5rem 0;
 }
-
 .subtotal-title,
 .subtotal-value,
 .total-title,
@@ -469,44 +419,36 @@ aside {
   float: left;
   width: 50%;
 }
-
 .summary-promo {
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
 }
-
 .promo-title {
   float: left;
   width: 70%;
 }
-
 .promo-value {
   color: #8B0000;
   float: left;
   text-align: right;
   width: 30%;
 }
-
 .summary-delivery {
   padding-bottom: 3rem;
 }
-
 .subtotal-value,
 .total-value {
   text-align: right;
 }
-
 .total-title {
   font-weight: bold;
   text-transform: uppercase;
 }
-
 .summary-checkout {
   display: block;
 }
-
 .checkout-cta {
   display: block;
   float: none;
@@ -516,7 +458,6 @@ aside {
   padding: 0.625rem 0;
   width: 100%;
 }
-
 .summary-delivery-selection {
   background-color: #ccc;
   border: 1px solid #aaa;
@@ -526,7 +467,9 @@ aside {
   height: 34px;
   width: 100%;
 }
-
+.checkout-class{
+  margin-top: 1rem;
+}
 @media screen and (max-width: 640px) {
   aside,
   .basket,
@@ -575,7 +518,6 @@ aside {
     position: relative;
   }
 }
-
 @media screen and (min-width: 641px) and (max-width: 960px) {
   aside {
     padding: 0 1rem 0 0;
@@ -584,7 +526,6 @@ aside {
     width: 28%;
   }
 }
-
 @media screen and (max-width: 960px) {
   main {
     width: 100%;
@@ -593,6 +534,4 @@ aside {
     padding: 0 1rem;
   }
 }
-
-
 </style>
