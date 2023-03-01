@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductListController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,44 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/', function () {
+    ProductListController::returnView();
+});
+
+// TODO, Search function
+Route::get('/search', function () {
+    ProductListController::returnView();
+});
+
+// TODO, Checkout view function
+Route::get('/checkout', function () {
+    ProductListController::returnView();
+});
+
+// TODO, Detail view function
+Route::get('/product', function () {
+    ProductListController::returnView();
+});
+
+// TODO, Detail view function
+Route::get('/intoCart/{sku}', function (string $sku) {
+    ProductListController::addToCart($sku);
+});
+
+// TODO, Detail view function
+Route::get('/outOfCart/{sku}', function (string $sku) {
+    ProductListController::removeFromCart($sku);
+});
+
+
+// TODO, Detail view function
+Route::get('/test', function () {
+    ProductListController::test();
+});
+
