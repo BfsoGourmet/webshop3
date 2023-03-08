@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductListController;
+use App\Http\Controllers\CartController;
 use Illuminate\Http\Request;
 
 /*
@@ -32,7 +33,7 @@ Route::get('/search', function () {
 
 // TODO, Checkout view function
 Route::get('/checkout', function () {
-    ProductListController::returnCartView();
+    CartController::returnCartView();
 });
 
 // TODO, Detail view function
@@ -42,12 +43,12 @@ Route::get('/product', function () {
 
 // TODO, Detail view function
 Route::get('/intoCart/{sku}', function (string $sku) {
-    ProductListController::addToCart($sku);
+    CartController::addToCart($sku);
 });
 
 // TODO, Detail view function
 Route::get('/outOfCart/{sku}', function (string $sku) {
-    ProductListController::removeFromCart($sku);
+    CartController::removeFromCart($sku);
 });
 
 

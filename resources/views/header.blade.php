@@ -33,7 +33,7 @@
             <form class="d-flex" action="/checkout/">
                 <button class="btn btn-outline-dark" type="submit">
                     @php
-                        $amountInCart = App\Http\Controllers\ProductListController::getCartTotal();
+                        $amountInCart = App\Http\Controllers\CartController::getCartTotal();
                     @endphp
                     <i class="bi-cart-fill me-1"></i>
                     Warenkorb
