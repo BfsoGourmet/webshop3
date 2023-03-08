@@ -21,7 +21,7 @@ class ProductListController extends BaseController
     }
 
     private static function returnProductList() {
-        $result = DataController::getAPI('http://localhost/data.json');
+        $result = DataController::getAllProducts();
 
         $products = $result['products'];
 
