@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\DataController;
 
 class ProductListController extends BaseController
 {
@@ -19,16 +20,8 @@ class ProductListController extends BaseController
         echo view('footer');
     }
 
-
-    private static function getAPI($url) {
-        // For test
-        $response = Http::get($url);
-        return $response->json();
-
-    }
-
     private static function returnProductList() {
-        $result = self::getAPI('http://localhost/data.json');
+        $result = DataController::getAPI('http://localhost/data.json');
 
         $products = $result['products'];
 

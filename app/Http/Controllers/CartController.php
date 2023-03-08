@@ -19,6 +19,7 @@ class CartController extends BaseController
     }
 
     public static function updateCart( $sku,$amountProducts) {
+        
         session()->put('products.'.$sku,  $amountProducts);
         echo self::getCartTotal();
     }
