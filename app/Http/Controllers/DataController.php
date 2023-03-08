@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Http;
 use PhpParser\Node\Expr\FuncCall;
+use Illuminate\Support\Facades\global;
 
 class DataController extends BaseController
 {
@@ -34,8 +35,8 @@ class DataController extends BaseController
      */
     public static function getProductFromSku($sku) {
         if (self::validateSKU($sku)) {
-            $response = self::getAPIData('http://localhost/data.json'); // TODO, use Filterfunction from API
-            return $response['products'];
+            $response = self::getAPIData(config('global.wawi_api_url').'product/'.$sku); // TODO, use Filterfunction from API
+            return $response['data'];
         }
         else {
             return null;
@@ -48,8 +49,8 @@ class DataController extends BaseController
      * @return array
      */
     public static function getAllProducts() {
-        $response = self::getAPIData('http://localhost/data.json');
-        return $response['products'];
+        $response = self::getAPIData(config('global.wawi_api_url').'products');
+        return $response['data'];
     }
 
 
@@ -60,7 +61,7 @@ class DataController extends BaseController
      * @return boolean
      */
     private static function validateSKU($sku) {
-        // Code here ...
+        return true;
     }
 }
 

@@ -23,9 +23,7 @@ class ProductListController extends BaseController
     private static function returnProductList() {
         $result = DataController::getAllProducts();
 
-        $products = $result['products'];
-
-        echo view('list')->with('products', $products);
+        echo view('list')->with('products', $result);
     }
 
     public static function test() {

@@ -8,20 +8,21 @@
                         <span class="badge badge-secondary badge-pill">3</span>
                     </h4>
                     <ul class="list-group mb-3">
+                        @foreach($products as $product)
+                            <!-- Produkt -->
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">{{ $product['info']['title'] }}</h6>
+                                    <small class="text-muted">{{ $product['info']['short_description'] }}</small>
+                                </div>
+                                <span class="text-muted">CHF {{ $product['info']['price'] }}</span>
+                            </li>
 
-                        <!-- Produkt -->
-                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div>
-                                <h6 class="my-0">Produkt</h6>
-                                <small class="text-muted">Kurzbeschr.</small>
-                            </div>
-                            <span class="text-muted">CHF 12</span>
-                        </li>
-
-                        <li class="list-group-item d-flex justify-content-between">
-                            <span>Total (CHF)</span>
-                            <strong>12</strong>
-                        </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total (CHF) {{$product['info']['price'] * $product['amount']}}</span>
+                                <strong>12</strong>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="col-md-8 order-md-1">
