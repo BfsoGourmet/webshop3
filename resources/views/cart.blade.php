@@ -75,9 +75,6 @@
                                 Bitte geben Sie Ihre Adresse ein.
                             </div>
                         </div>
-
-                        
-
                         <div class="row">
                             <div class="col-md-5 mb-3">
                                 <label for="country">Land</label>
@@ -101,26 +98,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!--
                         <hr class="mb-4">
                         <h4 class="mb-3">Zahlung</h4>
-                        <div class="d-block my-3">
-                            <div class="custom-control custom-radio">
-                                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input"
-                                    checked required>
-                                <label class="custom-control-label" for="credit">Credit card</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input"
-                                    required>
-                                <label class="custom-control-label" for="debit">Debit card</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input"
-                                    required>
-                                <label class="custom-control-label" for="paypal">Paypal</label>
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="cc-name">Name on card</label>
@@ -154,7 +133,6 @@
                                 </div>
                             </div>
                         </div>
-                    -->
                         <hr class="mb-4">
                         <button class="btn btn-primary btn-lg btn-block" type="submit">Zahlen und bestellen</button>
                     </form>
