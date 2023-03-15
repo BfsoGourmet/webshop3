@@ -36,6 +36,10 @@ Route::get('/checkout', function () {
     CartController::returnCartView();
 });
 
+Route::get('/checkout/process', function () {
+    CartController::returnCartView();
+});
+
 // TODO, Detail view function
 Route::get('/product', function () {
     ProductListController::returnView();

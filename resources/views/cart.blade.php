@@ -42,18 +42,18 @@
                 @if ($products)
                 <div class="col-md-8 order-md-1">
                     <h4 class="mb-3">Rechnungs- und Lieferadresse</h4>
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" action="/checkout/process">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstName">Vorname</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                <input type="text" class="form-control" name="firstName" placeholder="" value="" required>
                                 <div class="invalid-feedback">
                                     Vorname muss eingegeben werden.
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="lastName">Nachname</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                <input type="text" class="form-control" name="lastName" placeholder="" value="" required>
                                 <div class="invalid-feedback">
                                     Nachname muss eingegeben werden.
                                 </div>
@@ -62,7 +62,7 @@
 
                         <div class="mb-3">
                             <label for="email">Email <span class="text-muted"></span></label>
-                            <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                            <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
                             <div class="invalid-feedback">
                                 Bitte geben Sie eine gültige Email-Adresse an.
                             </div>
@@ -70,7 +70,7 @@
 
                         <div class="mb-3">
                             <label for="address">Adresse</label>
-                            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                            <input type="text" class="form-control" name="address" placeholder="1234 Main St" required>
                             <div class="invalid-feedback">
                                 Bitte geben Sie Ihre Adresse ein.
                             </div>
@@ -78,21 +78,21 @@
                         <div class="row">
                             <div class="col-md-5 mb-3">
                                 <label for="country">Land</label>
-                                <input type="text" class="form-control" id="country" placeholder="Schweiz" required>
+                                <input type="text" class="form-control" name="country" placeholder="Schweiz" required>
                                 <div class="invalid-feedback">
                                     Bitte geben Sie ein Land ein.
                                 </div>
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="state">Ort</label>
-                                <input type="text" class="form-control" id="place" placeholder="Musterstadt" required>
+                                <input type="text" class="form-control" name="place" placeholder="Musterstadt" required>
                                 <div class="invalid-feedback">
                                     Bitte geben Sie einen Ort ein.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="PLZ">PLZ</label>
-                                <input type="text" class="form-control" id="zip" placeholder="" required>
+                                <input type="text" class="form-control" name="zip" placeholder="" required>
                                 <div class="invalid-feedback">
                                     Zip code required.
                                 </div>
@@ -103,7 +103,7 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="cc-name">Name on card</label>
-                                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                <input type="text" class="form-control" name="cc-name" placeholder="" required>
                                 <small class="text-muted">Full name as displayed on card</small>
                                 <div class="invalid-feedback">
                                     Name on card is required
@@ -111,7 +111,7 @@
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="cc-number">Credit card number</label>
-                                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                                <input type="text" class="form-control" name="cc-number" placeholder="" required>
                                 <div class="invalid-feedback">
                                     Credit card number is required
                                 </div>
@@ -120,14 +120,14 @@
                         <div class="row">
                             <div class="col-md-3 mb-3">
                                 <label for="cc-expiration">Expiration</label>
-                                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                                <input type="text" class="form-control" name="cc-expiration" placeholder="" required>
                                 <div class="invalid-feedback">
                                     Expiration date required
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="cc-expiration">CVV</label>
-                                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                                <input type="text" class="form-control" name="cc-cvv" placeholder="" required>
                                 <div class="invalid-feedback">
                                     Security code required
                                 </div>
