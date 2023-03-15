@@ -8,23 +8,38 @@
                         <span class="badge badge-secondary badge-pill">3</span>
                     </h4>
                     <ul class="list-group mb-3">
-                        @foreach($products as $product)
-                            <!-- Produkt -->
-                            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                <div>
-                                    <h6 class="my-0">{{ $product['info']['title'] }}</h6>
-                                    <small class="text-muted">{{ $product['info']['short_description'] }}</small>
-                                </div>
-                                <span class="text-muted">CHF {{ $product['info']['price'] }}</span>
-                            </li>
+                        @if ($products)
+                        @php
+                            $total = 0;
+                        @endphp
+                            @foreach($products as $product)
+                                @if (isset($product['amount']) && $product['amount'] > 0)
+                                <!-- Produkt -->
+                                @php
+                                $total += $product['info']['price'] * $product['amount'];
+                                @endphp
 
+                                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                    <div>
+                                        <h6 class="my-0">{{ $product['info']['title'] }} </h6>
+                                        <small class="text-muted">({{$product['amount']}} x CHF {{ number_format( $product['info']['price'],2, '.', '') }})<br>{{ $product['info']['short_description'] }}</small>
+                                    </div>
+                                    <span class="text-muted " style="text-align:right;">CHF {{ number_format( $product['info']['price']* $product['amount'],2, '.', '') }}<br><a onclick="removeFromCart(`{{$product['info']['sku']}}`)"><i class="bi bi-trash"></i></a></span>
+
+                                </li>
+                                @endif
+                            @endforeach
                             <li class="list-group-item d-flex justify-content-between">
-                                <span>Total (CHF) {{$product['info']['price'] * $product['amount']}}</span>
-                                <strong>12</strong>
+                                    <span>Total</span>
+                                    <strong>CHF {{number_format( $total,2, '.', '')}}</strong>
                             </li>
-                        @endforeach
+                        @endif
+                        @if (!$products)
+                        <h6 class="my-0">sieht leer aus!</h6>
+                        @endif
                     </ul>
                 </div>
+                @if ($products)
                 <div class="col-md-8 order-md-1">
                     <h4 class="mb-3">Rechnungs- und Lieferadresse</h4>
                     <form class="needs-validation" novalidate>
@@ -144,6 +159,7 @@
                         <button class="btn btn-primary btn-lg btn-block" type="submit">Zahlen und bestellen</button>
                     </form>
                 </div>
+                @endif
             </div>
         </div>
     </section>

@@ -54,6 +54,7 @@ Route::get('/outOfCart/{sku}', function (string $sku) {
 
 // TODO, Detail view function
 Route::get('/test', function () {
-    ProductListController::test();
+    //echo view('header');
+    echo view('server_error');
 });
 

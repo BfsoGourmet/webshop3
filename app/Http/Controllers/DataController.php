@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use ErrorException;
+use Exception;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
@@ -22,9 +24,14 @@ class DataController extends BaseController
      */
     private static function getAPIData($url) {
         // For test
-        $response = Http::get($url);
+        try {
+            if (!$response = Http::get($url))
+                throw new ErrorException('error');
+        }
+        catch(Exception $e) {
+            return false;
+        }
         return $response->json();
-
     }
 
     /**
@@ -35,7 +42,9 @@ class DataController extends BaseController
      */
     public static function getProductFromSku($sku) {
         if (self::validateSKU($sku)) {
-            $response = self::getAPIData(config('global.wawi_api_url').'product/'.$sku); // TODO, use Filterfunction from API
+            if (!$response = self::getAPIData(config('global.wawi_api_url').'product/'.$sku))
+                return false;
+
             return $response['data'];
         }
         else {
@@ -50,6 +59,9 @@ class DataController extends BaseController
      */
     public static function getAllProducts() {
         $response = self::getAPIData(config('global.wawi_api_url').'products');
+        if (!$response)
+            return false;
+            
         return $response['data'];
     }
 

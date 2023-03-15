@@ -23,7 +23,10 @@ class CartController extends BaseController
     }
 
     private static function returnCartList() {
-        echo view('cart')->with('products', session()->all()['products']);
+        if (!isset(session()->all()['products']))
+            echo view('cart')->with('products', false);
+        else    
+            echo view('cart')->with('products', session()->all()['products']);
     }
 
     /**
@@ -35,10 +38,16 @@ class CartController extends BaseController
     public static function updateCart( $sku,$amountProducts) {
         // TODO, search for only sku $sku
         $product_information = DataController::getProductFromSku($sku);
-        //dd($product_information);
-        session()->put('products.'.$sku.'.amount',  $amountProducts);
-        session()->put('products.'.$sku.'.info', $product_information);
-        echo self::getCartTotal();
+        if (!$product_information) {
+            echo 'Server error';
+        }
+        else {
+            if ($amountProducts > 0) {
+                session()->put('products.'.$sku.'.amount',  $amountProducts);
+                session()->put('products.'.$sku.'.info', $product_information);
+                echo self::getCartTotal();
+            } 
+        }
     }
 
     /**
@@ -62,7 +71,8 @@ class CartController extends BaseController
         $totalInCart = 0;
         if ($products != null){
             foreach ($products as $sku) {
-               $totalInCart += $sku['amount'];
+                if (isset($sku['amount']))
+                    $totalInCart += $sku['amount'];
             }
         }
         return $totalInCart;
@@ -75,13 +85,9 @@ class CartController extends BaseController
      */
     public static function removeFromCart($sku) {
         $amountProducts = intVal(session()->get('products.'.$sku.'.amount'));
-        $amountProducts--;
-        if ($amountProducts <= 0) {
-            session()->remove('products.'.$sku.'.amount');
-        }
-        else {
-            self::updateCart($sku,$amountProducts);
-        }
+        if ($amountProducts >= 0);
+            session()->flash('products.'.$sku.'.amount', --$amountProducts);
+        
     }
 }
 
