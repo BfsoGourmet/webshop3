@@ -1,0 +1,22 @@
+{
+    "order" : {
+        "customer" : {
+            "firstName" : "Leo",
+            "lastName" : "Possa",
+            "address" : "Lochwaldstrasse 6",
+            "city" : "Leukerbad",
+            "zip" : "3954",
+            "country" : "CH"
+        },
+        "products" : [
+            {
+                "sku" : "00000001",
+                "amount" : 1
+            },
+            {
+                "sku" : "00000002",
+                "amount" : 3
+            }
+        ] 
+    }
+}
