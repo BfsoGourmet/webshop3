@@ -52,6 +52,7 @@ Route::get('/checkout/process', function () {
     $crd->setCcExpiration($_GET['cc-expiration']);
     $crd->setCcCVV($_GET['cc-cvv']);
     $checkout = new CheckoutController($crd);
+    $checkout->sendMail();
     
 });
 
