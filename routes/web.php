@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductListController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CredentialController;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Http\Request;
 
 /*
@@ -37,7 +39,20 @@ Route::get('/checkout', function () {
 });
 
 Route::get('/checkout/process', function () {
-    CartController::returnCartView();
+    $crd = new CredentialController();
+    $crd->setFirstname($_GET['firstName']);
+    $crd->setLastname($_GET['lastName']);
+    $crd->setEmail($_GET['email']);
+    $crd->setAddress($_GET['address']);
+    $crd->setCountry($_GET['country']);
+    $crd->setPlace($_GET['place']);
+    $crd->setZip($_GET['zip']);
+    $crd->setCcName($_GET['cc-name']);
+    $crd->setCcNumber($_GET['cc-number']);
+    $crd->setCcExpiration($_GET['cc-expiration']);
+    $crd->setCcCVV($_GET['cc-cvv']);
+    $checkout = new CheckoutController($crd);
+    
 });
 
 // TODO, Detail view function
