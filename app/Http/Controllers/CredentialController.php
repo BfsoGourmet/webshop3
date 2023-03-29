@@ -24,6 +24,7 @@ class CredentialController extends BaseController
     private $ccNumber;
     private $ccExpiration;
     private $ccCVV;
+    private $deliveryID;
 
 
     public function setFirstname($firstname) {
@@ -70,6 +71,10 @@ class CredentialController extends BaseController
         $this->ccCVV = $ccCVV;
     }
 
+    public function setDeliveryID($deliveryID) {
+        $this->deliveryID = $deliveryID;
+    }
+    
     public function getFirstname() {
         return $this->firstname;
     }
@@ -112,6 +117,10 @@ class CredentialController extends BaseController
 
     public function getCcCVV() {
         return $this->ccCVV;
+    }
+
+    public function getDeliveryID() {
+        return $this->deliveryID;
     }
 
 }

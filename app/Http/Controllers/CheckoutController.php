@@ -22,7 +22,40 @@ class CheckoutController extends BaseController
     }
 
     public function makeCheckout() {
+        $orderJSON = $this->generateJSON();
+        $response = Http::withBody($orderJSON,'application/json')->post(config('global.wawi_api_url').'delivery/');
+        if (isset(json_decode($response, true)['state']) == 'OK') {
+            $this->credential->setDeliveryID(json_decode($response, true)['delivery_id']);
+            $this->sendMail();
+        }
+        else {
+            echo 'Order error';
+            exit();
+        }
+    }
+
+    private function generateJSON()
+    {
+        $orderJSON = '
+        {
+            "fname": "'.$this->credential->getFirstname().'",
+            "lname": "'.$this->credential->getLastname().'",
+            "city": "'.$this->credential->getPlace().'",
+            "zip": "'.$this->credential->getZip().'",
+            "country": "'.$this->credential->getCountry().'",
+            "address": "'.$this->credential->getAddress().'",
+            "products": [';
         
+        foreach (session()->all()['products'] as $product) {
+           $orderJSON .= '{
+                    "sku": "'.$product["info"]["sku"].'",
+                    "amount": "'.$product["amount"].'"
+                },';
+        }
+        $orderJSON = rtrim($orderJSON,",");
+        $orderJSON .=']}';
+
+        return $orderJSON;
     }
 
     public function sendMail() {

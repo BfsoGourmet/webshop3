@@ -1,5 +1,5 @@
 <h1><strong><u>Bestellbest&auml;tigung</u></strong></h1>
-<p><strong>Ihre Bestellung (Nr. </strong><strong>$bestellnr</strong><strong>) vom </strong><strong>{{NOW()}}</strong></p>
+<p><strong>Ihre Bestellung (Nr. </strong><strong>{{$credential->getDeliveryID()}}</strong><strong>) vom </strong><strong>{{NOW()}}</strong></p>
 <p>Hallo {{$credential->getFirstname()}}, deine Bestellung&nbsp;ist bei uns eingegangen - vielen Dank f&uuml;r dein Vertrauen in unseren Shop! Die folgenden Artikel wurden von dir bestellt:</p>
 <br>
 <table style='width:100%'>
