@@ -5,7 +5,10 @@ use App\Http\Controllers\ProductListController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CredentialController;
 use App\Http\Controllers\CheckoutController;
+use App\Mail\OrderConfirmation;
+use Illuminate\Contracts\Mail\Mailer as MailMailer;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Mailer;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,17 +28,17 @@ Route::get('/', function () {
 */
 
 Route::get('/', function () {
-    ProductListController::returnView();
+    return ProductListController::returnView();
 });
 
 // TODO, Search function
 Route::get('/search', function () {
-    ProductListController::returnView();
+    return ProductListController::returnView();
 });
 
 // TODO, Checkout view function
 Route::get('/checkout', function () {
-    CartController::returnCartView();
+    return CartController::returnCartView();
 });
 
 Route::get('/checkout/process', function () {
@@ -58,7 +61,7 @@ Route::get('/checkout/process', function () {
 
 // TODO, Detail view function
 Route::get('/product', function () {
-    ProductListController::returnView();
+    return ProductListController::returnView();
 });
 
 // TODO, Detail view function
@@ -71,10 +74,8 @@ Route::get('/outOfCart/{sku}', function (string $sku) {
     CartController::removeFromCart($sku);
 });
 
-
 // TODO, Detail view function
 Route::get('/test', function () {
-    //echo view('header');
-    echo view('server_error');
+    echo 'test';
 });
 

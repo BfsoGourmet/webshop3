@@ -8,17 +8,21 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use App\Http\Controllers\CredentialController;
 
 class OrderConfirmation extends Mailable
 {
     use Queueable, SerializesModels;
+    private CredentialController $credential;
 
     /**
      * Create a new message instance.
+     * 
+     * @param $credential CredentialController
      */
-    public function __construct()
+    public function __construct($credential)
     {
-        //
+        $this->credential = $credential;
     }
 
     /**
@@ -49,5 +53,14 @@ class OrderConfirmation extends Mailable
     public function attachments(): array
     {
         return [];
+    }
+
+    public function build()
+    {
+        return $this
+            ->from('gourmet.wallis@gmail.com')
+            ->to($this->credential->getEmail())
+            ->subject('Your bads will be shipped!')
+            ->view('mail')->with('credential', $this->credential);
     }
 }

@@ -17,16 +17,14 @@ class CartController extends BaseController
      * Returns cart view
      */
     public static function returnCartView() {
-        echo view('header');
-        self::returnCartList();
-        echo view('footer');
+        return self::returnCartList();
     }
 
     private static function returnCartList() {
         if (!isset(session()->all()['products']))
-            echo view('cart')->with('products', false);
+            return view('cart')->with('products', false);
         else    
-            echo view('cart')->with('products', session()->all()['products']);
+            return view('cart')->with('products', session()->all()['products']);
     }
 
     /**

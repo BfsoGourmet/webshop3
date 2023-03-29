@@ -26,6 +26,6 @@ class CheckoutController extends BaseController
     }
 
     public function sendMail() {
-        Mail::to($this->credential->getEmail())->send(new OrderConfirmation('Test'));
+        Mail::send(new OrderConfirmation($this->credential));
     }
 }

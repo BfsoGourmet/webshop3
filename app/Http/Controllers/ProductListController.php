@@ -15,24 +15,17 @@ class ProductListController extends BaseController
     //use AuthorizesRequests, ValidatesRequests;
 
     public static function returnView() {
-        echo view('header');
-        self::returnProductList();
-        echo view('footer');
+        return self::returnProductList();
     }
 
     private static function returnProductList() {
         $result = DataController::getAllProducts();
 
         if (!$result)
-            echo view('server_error');
+            return view('server_error');
         else
-            echo view('list')->with('products', $result);
+            return view('list')->with('products', $result);
 
-    }
-
-    public static function test() {
-        print_r(session()->get('products'));
-        session()->flush();
     }
 }
 
